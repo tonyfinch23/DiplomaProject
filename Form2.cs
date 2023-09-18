@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +42,7 @@ namespace sampleconnection
             else
             { LabelInformation.Text = "Your daily caloric intake for the next " +
                     days.ToString() + " days in order to shed " + Form1.weightToLoseFinal.ToString() +
-                    " kgs should be around:\n" + caloricBalance.ToString() + " kcal"; }
+                    " kgs should be around:\n" + (caloricBalance - caloricBalance%100).ToString() + "-" + (caloricBalance - caloricBalance % 100 + 100).ToString() + " kcal"; }
 
             decimal IncreaseOrDecreaseFrom2000 = caloricBlanaceDecimal - 2000;
             decimal percentage = (IncreaseOrDecreaseFrom2000 / 2000) * 100;
